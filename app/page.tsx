@@ -20,7 +20,7 @@ const Homepage = () => {
           href="documents/Resume-Julia-Rodrigues-EN.pdf"
           download="Resume-Julia-Rodrigues-EN.pdf"
         >
-          <button>Get CV</button>
+          <button>Get my CV</button>
         </a>
       </div>
     </div>
