@@ -1,0 +1,27 @@
+.contact-page {
+  .about__content {
+    display: grid;
+    grid-template-areas:
+      'email subject'
+      'message message'
+      'button button';
+    column-gap: 1rem;
+
+    #sender-email {
+      grid-area: email;
+    }
+
+    #email-subject {
+      grid-area: subject;
+    }
+
+    #email-content {
+      grid-area: message;
+      resize: vertical;
+    }
+
+    button {
+      grid-area: button;
+    }
+  }
+}
