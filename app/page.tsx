@@ -1,3 +1,7 @@
+//import resumePDF from '@/public/documents/Resume-Julia-Rodrigues-EN.pdf';
+
+import Link from 'next/link';
+
 const Homepage = () => {
   return (
     <div className="home">
@@ -8,8 +12,16 @@ const Homepage = () => {
       </div>
 
       <div className="home__actions">
-        <button>Hire me</button>
-        <button>Get CV</button>
+        <Link href="/contact">
+          <button>Hire me</button>
+        </Link>
+
+        <a
+          href="documents/Resume-Julia-Rodrigues-EN.pdf"
+          download="Resume-Julia-Rodrigues-EN.pdf"
+        >
+          <button>Get CV</button>
+        </a>
       </div>
     </div>
   );
