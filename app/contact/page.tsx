@@ -10,6 +10,10 @@ const ContactPage = () => {
 
         <button>Send Message</button>
       </div>
+      <p>
+        [DISCLAIMER] Currently under construction, if you wish to contact me
+        please do so through linkedin or my email nimmulabs@gmail.com
+      </p>
     </div>
   );
 };
