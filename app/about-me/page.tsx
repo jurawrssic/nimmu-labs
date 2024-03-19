@@ -13,9 +13,9 @@ const AboutMePage = () => {
             which is when I began my work experience as well.
           </p>
           <p>
-            My main focus is JavaScript-driven technologies like React, but I've
-            also worked as a Full Stack Developer a few times. I can handle and
-            learn whatever is needed of me.
+            My main focus is JavaScript-driven technologies like React, but
+            I&apos;ve also worked as a Full Stack Developer a few times. I can
+            handle and learn whatever is needed of me.
           </p>
           <p>
             I particularly enjoy working in community-based workplaces. I find
@@ -36,18 +36,18 @@ const AboutMePage = () => {
           </p>
           <p>
             I tend to get nervous during interviews or first-time meetings, but
-            with time, you'll see that it tends to fade. As I become more
-            comfortable and confident, you'll find that I am a well-spoken, good
-            communicator. I have led many meetings directly with customers in
-            the past.
+            with time, you&apos;ll see that it tends to fade. As I become more
+            comfortable and confident, you&apos;ll find that I am a well-spoken,
+            good communicator. I have led many meetings directly with customers
+            in the past.
           </p>
           <p>
             I am patient with non-technical people when explaining something
             outside of their knowledge. At a previous job, this was a daily
-            task. I ensure people are following along, and if not, I'll explain
-            as many times as needed and am not bothered by it.
+            task. I ensure people are following along, and if not, I&apos;ll
+            explain as many times as needed and am not bothered by it.
           </p>
-          <p>Hopefully you'll like what you see! :)</p>
+          <p>Hopefully you&apos;ll like what you see! :)</p>
 
           <p>
             <IoLanguage /> Languages I speak: Portuguese and English
