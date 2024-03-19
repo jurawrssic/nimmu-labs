@@ -1,0 +1,86 @@
+@import './variables.scss';
+
+@import './about-me-page.module.scss';
+@import './contact-page.module.scss';
+@import './experience-and-skills-page.module.scss';
+@import './homepage.module.scss';
+@import './navbar.module.scss';
+@import './projects-page.module.scss';
+
+body {
+  color: $darkBlue;
+  background-color: $celesteGreen;
+}
+
+body,
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+button {
+  background-color: $lavenderPink;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $darkBlue;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+
+  &:hover {
+    color: $moonstoneBlue;
+    background-color: $lightLavenderPurple;
+    transition: all $defaultTransitionTime;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $darkBlue;
+
+  &:hover {
+    color: $moonstoneBlue;
+    transition: color $defaultTransitionTime;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.35fr 1fr;
+  gap: 3rem;
+
+  max-width: 90%;
+  margin: 4rem auto;
+
+  min-height: calc(100vh - 8rem);
+
+  .navbar,
+  .content {
+    background-color: $mintCreamGreen;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .content {
+    padding: 3rem;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}

@@ -1,0 +1,10 @@
+.experience-page {
+  .about__content {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      grid-auto-rows: min-content;
+      gap: 0.5rem;
+    }
+  }
+}

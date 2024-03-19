@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 2rem 1rem;
+
+  &__avatar {
+    object-fit: cover;
+    border-radius: 100%;
+  }
+
+  &__links {
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.25rem;
+    }
+  }
+
+  .footer {
+    &__links {
+      a {
+        font-size: 1.5rem;
+        padding: 0 0.25rem;
+      }
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+  }
+}

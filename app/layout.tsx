@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import '../styles/globals.scss';
+import '../styles/_index.scss';
 import SideNavBar from '@/components/SideNavBar';
 
 import { Syne } from 'next/font/google';
