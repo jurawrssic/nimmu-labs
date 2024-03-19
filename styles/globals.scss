@@ -186,3 +186,10 @@ a {
   flex-direction: column;
   row-gap: 3rem;
 }
+
+.projects-page {
+  &__project {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+  }
+}
