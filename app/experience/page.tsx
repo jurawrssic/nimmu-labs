@@ -85,7 +85,7 @@ const ExperienceAndSkillsPage = () => {
         <div className="about__content">
           <div>
             <h2>Universidade Estadual do Centro-Oeste</h2>
-            <p>Bachelor's Degree in Computer Science (2014 - 2019)</p>
+            <p>Bachelor&apos;s Degree in Computer Science (2014 - 2019)</p>
           </div>
         </div>
       </div>
