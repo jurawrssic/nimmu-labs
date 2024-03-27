@@ -94,6 +94,7 @@ a {
 
 @media (max-width: 768px) {
   .container {
+    height: 100%;
     grid-template-columns: 1fr;
 
     .content {
