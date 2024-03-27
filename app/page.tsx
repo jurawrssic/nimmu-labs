@@ -1,7 +1,10 @@
 'use client';
-import Link from 'next/link';
-import { fairyDustCursor } from 'cursor-effects';
 import { useEffect } from 'react';
+
+import { fairyDustCursor } from 'cursor-effects';
+import SparklesComponent from '@/components/Sparkles';
+
+import Link from 'next/link';
 
 const Homepage = () => {
   useEffect(() => {
@@ -20,7 +23,9 @@ const Homepage = () => {
 
       <div className="home__actions">
         <Link href="/contact">
-          <button>Hire me</button>
+          <button>
+            <SparklesComponent>Hire me</SparklesComponent>
+          </button>
         </Link>
 
         <a
