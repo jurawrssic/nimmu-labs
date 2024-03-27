@@ -1,5 +1,3 @@
-//import resumePDF from '@/public/documents/Resume-Julia-Rodrigues-EN.pdf';
-
 import Link from 'next/link';
 
 const Homepage = () => {
