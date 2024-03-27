@@ -5,6 +5,7 @@ import ProjectDetails from '@/app/projects/component/ProjectDetails';
 
 const projects = [
   {
+    id: 'project-01',
     imgSrc: tennisCourtBookingApp,
     imgAlt: 'Screenshot of a project for booking tenis courts.',
     projectTitle: 'Tennis Court Booking',
@@ -19,6 +20,7 @@ const projects = [
     liveDemoLink: 'https://tennis-court-booking-two.vercel.app/',
   },
   {
+    id: 'project-02',
     imgSrc: swimmerTrackerApp,
     imgAlt: 'Screenshot of a project for tracking swimming laps/progress.',
     projectTitle: 'Swimmer Tracker',
@@ -41,6 +43,7 @@ const ProjectsPage = () => {
 
       {projects.map((project) => (
         <ProjectDetails
+          key={project.id}
           imgSrc={project.imgSrc}
           imgAlt={project.imgAlt}
           projectTitle={project.projectTitle}
