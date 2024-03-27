@@ -73,6 +73,7 @@ a {
   gap: 3rem;
 
   max-width: 90%;
+  min-height: calc(100vh - 8rem);
   margin: 4rem auto;
 
   .navbar,
@@ -94,7 +95,6 @@ a {
 
 @media (max-width: 768px) {
   .container {
-    height: 100%;
     grid-template-columns: 1fr;
 
     .content {
