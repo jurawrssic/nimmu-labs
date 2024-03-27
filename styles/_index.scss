@@ -35,14 +35,14 @@ button {
   padding: 1rem 2rem;
   font-size: 1rem;
   font-weight: 600;
-  color: $darkBlue;
+  color: $darkPink;
   text-transform: uppercase;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   cursor: pointer;
 
   &:hover {
-    color: $moonstoneBlue;
+    color: $lavenderPurple;
     background-color: $lightLavenderPurple;
     transition: all $defaultTransitionTime;
   }
