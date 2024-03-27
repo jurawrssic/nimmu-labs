@@ -75,8 +75,6 @@ a {
   max-width: 90%;
   margin: 4rem auto;
 
-  min-height: calc(100vh - 8rem);
-
   .navbar,
   .content {
     background-color: $mintCreamGreen;
@@ -100,6 +98,16 @@ a {
 
     .content {
       padding: 1rem;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .container {
+    height: calc(100vh - 8rem);
+
+    .content {
+      overflow-y: scroll;
     }
   }
 }
