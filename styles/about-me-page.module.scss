@@ -28,3 +28,14 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .about {
+    padding: 2rem 1rem;
+
+    &__title {
+      top: -1.75rem;
+      left: 1rem;
+    }
+  }
+}

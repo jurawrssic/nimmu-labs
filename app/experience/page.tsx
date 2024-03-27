@@ -1,7 +1,7 @@
 const ExperienceAndSkillsPage = () => {
   return (
     <div className="experience-page wrapper">
-      <div className="about">
+      <div className="about skills">
         <div className="about__title">MY SKILLS</div>
         <div className="about__content">
           <ul>
@@ -39,48 +39,48 @@ const ExperienceAndSkillsPage = () => {
         </div>
       </div>
 
-      <div className="about">
+      <div className="about work-experience">
         <div className="about__title">WORK EXPERIENCE</div>
-        <div className="about__content work-experience">
+        <div className="about__content">
           <div>
             <h2>Full Stack Developer</h2>
-            <h3>NextMed (Translational Analytics & Statistics)</h3>
+            <h3>@ NextMed (Translational Analytics & Statistics)</h3>
             <p>Jun 2022 - Present</p>
           </div>
           <div>
             <h2>Company Owner</h2>
-            <h3>Nimmu Labs LTDA </h3>
+            <h3>@ Nimmu Labs LTDA </h3>
             <p>Jun 2022 - Present</p>
           </div>
           <div>
             <h2>Web Developer</h2>
-            <h3>Codeminer42 </h3>
+            <h3>@ Codeminer42 </h3>
             <p>Sep 2020 - Jun 2022</p>
           </div>
           <div>
             <h2>Solutions Engineer</h2>
-            <h3>Intellimize</h3>
+            <h3>@ Intellimize</h3>
             <p>Mar 2021 - Jun 2022</p>
           </div>
           <div>
             <h2>Frontend Developer</h2>
-            <h3>Grano Capital</h3>
+            <h3>@ Grano Capital</h3>
             <p>Sep 2020 - Mar 2021</p>
           </div>
           <div>
             <h2>Fullstack Projects Developer</h2>
-            <h3>Grupo Itax</h3>
+            <h3>@ Grupo Itax</h3>
             <p>Feb 2020 - Sep 2020</p>
           </div>
           <div>
             <h2>Intern</h2>
-            <h3>UniGuairacá</h3>
+            <h3>@ UniGuairacá</h3>
             <p>Feb 2016 - Dec 2017</p>
           </div>
         </div>
       </div>
 
-      <div className="about">
+      <div className="about education">
         <div className="about__title">EDUCATION</div>
         <div className="about__content">
           <div>
