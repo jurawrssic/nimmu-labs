@@ -1,6 +1,15 @@
+'use client';
 import Link from 'next/link';
+import { fairyDustCursor } from 'cursor-effects';
+import { useEffect } from 'react';
 
 const Homepage = () => {
+  useEffect(() => {
+    fairyDustCursor({
+      colors: ['#f582ae', '#7bdff2', '#a077c9'],
+    });
+  });
+
   return (
     <div className="home">
       <div className="home__description">
