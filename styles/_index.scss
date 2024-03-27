@@ -7,6 +7,24 @@
 @import './navbar.module.scss';
 @import './projects-page.module.scss';
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: $lightGray;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    $scrollbarGreen,
+    $scrollbarBlue,
+    $scrollbarPurple,
+    $scrollbarPink
+  );
+}
+
 body {
   color: $darkBlue;
   background-color: $celesteGreen;
