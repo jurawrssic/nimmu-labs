@@ -5,7 +5,8 @@ import Image from 'next/image';
 
 const ProjectsPage = () => {
   return (
-    <div className="projects-page wrapper">
+    <div className="about projects-page wrapper">
+      <div className="about__title">Projects</div>
       <a
         className="projects-page__project"
         href="https://tennis-court-booking-two.vercel.app/"
@@ -26,8 +27,7 @@ const ProjectsPage = () => {
 
         <Image
           src={tennisCourtBookingApp}
-          alt="a"
-          width={300}
+          alt="Screenshot of a project for booking tenis courts."
           className="project__image"
         />
       </a>
@@ -52,8 +52,7 @@ const ProjectsPage = () => {
 
         <Image
           src={swimmerTrackerApp}
-          alt="a"
-          width={300}
+          alt="Screenshot of a project for tracking swimming laps/progress"
           className="project__image"
         />
       </a>
