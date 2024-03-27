@@ -2,14 +2,15 @@
   &__project {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 0.5fr;
+    grid-template-rows: repeat(2, auto);
     gap: 1rem;
 
+    justify-items: center;
     text-align: center;
 
     img {
-      max-width: 100%;
-      height: auto;
+      max-width: 600px;
+      height: 100%;
     }
   }
 
