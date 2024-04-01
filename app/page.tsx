@@ -47,13 +47,13 @@ const Homepage = () => {
               href="documents/Resume-Julia-Rodrigues-EN.pdf"
               download="Resume-Julia-Rodrigues-EN.pdf"
             >
-              In English <PiDownloadSimpleBold />
+              English <PiDownloadSimpleBold />
             </a>
             <a
               href="documents/Resume-Julia-Rodrigues-PTbr.pdf"
               download="Resume-Julia-Rodrigues-PTbr.pdf"
             >
-              In Portuguese <PiDownloadSimpleBold />
+              Portuguese <PiDownloadSimpleBold />
             </a>
           </div>
         </div>
