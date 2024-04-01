@@ -1,11 +1,12 @@
 .contact-page {
   .about__content {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       'email subject'
       'message message'
       'button button';
-    column-gap: 1rem;
+    gap: 1rem;
 
     #sender-email {
       grid-area: email;
@@ -18,10 +19,47 @@
     #email-content {
       grid-area: message;
       resize: vertical;
+      min-height: 200px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
     }
 
     button {
       grid-area: button;
+
+      div {
+        display: flex;
+        column-gap: 0.5rem;
+        justify-content: center;
+      }
+    }
+  }
+
+  .loading-icon {
+    animation: loader 1s infinite;
+  }
+
+  @supports (rotate: 0deg) {
+    @keyframes loader {
+      0% {
+        rotate: 0deg;
+      }
+      100% {
+        rotate: 360deg;
+      }
+    }
+  }
+}
+
+@media (max-width: $laptopBreakpoint) {
+  .contact-page .about__content {
+    display: flex;
+
+    #email-content {
+      min-height: 350px;
     }
   }
 }

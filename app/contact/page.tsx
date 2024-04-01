@@ -1,19 +1,86 @@
+'use client';
+import { useState } from 'react';
+
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+
+import { validateEmail } from '@/typescript/utils';
+
 const ContactPage = () => {
+  const [isSendingEmail, setIsSendingEmail] = useState(false);
+  const [formData, setFormData] = useState({
+    senderEmail: '',
+    emailSubject: '',
+    emailContent: '',
+  });
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    setIsSendingEmail(true);
+
+    if (validateEmail(formData.senderEmail)) {
+      await fetch('/api/mail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+      setIsSendingEmail(false);
+    }
+  };
+
   return (
     <div className="contact-page about">
       <div className="about__title">CONTACT ME</div>
-      <div className="about__content">
-        <input id="sender-email" placeholder="Email" />
-        <input id="email-subject" placeholder="Subject" />
+      <form method="post" className="about__content" onSubmit={handleSubmit}>
+        <input
+          id="sender-email"
+          placeholder="Email"
+          value={formData.senderEmail}
+          onChange={(e) => {
+            setFormData({ ...formData, senderEmail: e.target.value });
+          }}
+          required={true}
+        />
+        <input
+          id="email-subject"
+          placeholder="Subject"
+          value={formData.emailSubject}
+          onChange={(e) => {
+            setFormData({ ...formData, emailSubject: e.target.value });
+          }}
+          required={true}
+        />
 
-        <textarea id="email-content" placeholder="Enter your message here" />
+        <textarea
+          id="email-content"
+          placeholder="Enter your message here"
+          value={formData.emailContent}
+          onChange={(e) => {
+            setFormData({ ...formData, emailContent: e.target.value });
+          }}
+          required={true}
+        />
 
-        <button>Send Message</button>
-      </div>
-      <p>
-        [DISCLAIMER] Currently under construction, if you wish to contact me
-        please do so through linkedin or my email nimmulabs@gmail.com
-      </p>
+        <button disabled={isSendingEmail}>
+          {isSendingEmail ? (
+            <div>
+              Sending Email
+              <AiOutlineLoading3Quarters className="loading-icon" />
+            </div>
+          ) : (
+            'Send message'
+          )}
+        </button>
+      </form>
     </div>
   );
 };
