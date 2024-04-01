@@ -6,12 +6,13 @@ import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { validateEmail } from '@/typescript/utils';
 
 const ContactPage = () => {
-  const [isSendingEmail, setIsSendingEmail] = useState(false);
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     senderEmail: '',
     emailSubject: '',
     emailContent: '',
-  });
+  };
+  const [formData, setFormData] = useState(initialFormData);
+  const [isSendingEmail, setIsSendingEmail] = useState(false);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -34,6 +35,7 @@ const ContactPage = () => {
         });
 
       setIsSendingEmail(false);
+      setFormData(initialFormData);
     }
   };
 
