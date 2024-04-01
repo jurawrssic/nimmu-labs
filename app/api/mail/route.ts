@@ -1,5 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
 import sendgrid from '@sendgrid/mail';
 
@@ -10,7 +9,7 @@ const API_KEY = process.env.SENDGRID_API_KEY || '';
 sendgrid.setApiKey(API_KEY);
 
 export async function POST(
-  req: NextApiRequest,
+  req: NextRequest,
   res: NextResponse
 ): Promise<NextResponse> {
   const { senderEmail, emailSubject, emailContent } = await new Response(
