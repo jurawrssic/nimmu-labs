@@ -44,7 +44,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $tabletBreakpoint) {
   .navbar {
     position: fixed;
     top: 0;

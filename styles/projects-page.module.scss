@@ -43,7 +43,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $tabletBreakpoint) {
   .projects-page .project img {
     max-width: calc(100vw - 8rem);
   }

@@ -18,15 +18,15 @@
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(
-    $scrollbarGreen,
-    $lightBlue,
-    $lightLavenderPurple,
+    $celadonGreen,
+    $lightNonPhotoBlue,
+    $periwinklePurple,
     $mimiPink
   );
 }
 
 body {
-  color: $darkBlue;
+  color: $pennBlue;
   background-color: $celesteGreen;
 }
 
@@ -49,38 +49,44 @@ ul {
 }
 
 button {
-  background-color: $lavenderPink;
-  padding: 1rem 2rem;
   font-size: 1rem;
   font-weight: 600;
-  color: $darkPink;
   text-transform: uppercase;
+  color: $mulberryPink;
+
+  padding: 1rem 2rem;
+  background-color: $lavenderPink;
+
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
   &:hover {
-    color: $lavenderPurple;
-    background-color: $lightLavenderPurple;
+    color: $amethystPurple;
+    background-color: $periwinklePurple;
     transition: all $defaultTransitionTime;
   }
 }
 
 input,
 textarea {
-  background-color: $mintCreamGreen;
-  border: 1px solid $lavenderPink;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
   font-size: 1rem;
+  font-family: '__Syne_1307d5', '__Syne_Fallback_1307d5';
+
+  padding: 0.5rem 1rem;
+  background-color: $mintCreamGreen;
+
+  border: 1px solid $lavenderPink;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
-  color: $darkBlue;
+  color: $pennBlue;
 
   &:hover {
-    color: $pink;
+    color: $skyMagentaPink;
     transition: color $defaultTransitionTime;
   }
 }
@@ -92,6 +98,7 @@ a {
 
   max-width: 90%;
   min-height: calc(100vh - 8rem);
+  min-height: calc(100svh - 8rem);
   margin: 4rem auto;
 
   .navbar,
@@ -111,7 +118,7 @@ a {
   row-gap: 3rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $tabletBreakpoint) {
   .container {
     grid-template-columns: 1fr;
 
@@ -124,6 +131,7 @@ a {
 @media (min-width: 769px) {
   .container {
     height: calc(100vh - 8rem);
+    height: calc(100svh - 8rem);
 
     .content {
       overflow-y: scroll;

@@ -23,7 +23,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $tabletBreakpoint) {
   .experience-page {
     .about.skills {
       ul {

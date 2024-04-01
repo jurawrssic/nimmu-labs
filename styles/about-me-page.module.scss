@@ -29,7 +29,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 520px) {
   .about {
     padding: 2rem 1rem;
 
@@ -37,5 +37,18 @@
       top: -1.75rem;
       left: 1rem;
     }
+  }
+}
+
+@media (min-width: 520px) and (max-width: $laptopBreakpoint) {
+  .about {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: $tabletBreakpoint) {
+  .about__title {
+    top: -1.75rem;
+    left: 1rem;
   }
 }
