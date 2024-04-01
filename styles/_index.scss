@@ -66,6 +66,13 @@ button {
     background-color: $periwinklePurple;
     transition: all $defaultTransitionTime;
   }
+
+  &:disabled,
+  &:disabled:hover {
+    background-color: $gray;
+    color: $darkGray;
+    cursor: default;
+  }
 }
 
 input,
