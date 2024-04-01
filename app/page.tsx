@@ -1,12 +1,17 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { fairyDustCursor } from 'cursor-effects';
 import SparklesComponent from '@/components/Sparkles';
 
+import { FaSortDown } from 'react-icons/fa';
+import { PiDownloadSimpleBold } from 'react-icons/pi';
+
 import Link from 'next/link';
 
 const Homepage = () => {
+  const [openDropdown, setOpenDropdown] = useState(false);
+
   useEffect(() => {
     fairyDustCursor({
       colors: ['#f582ae', '#7bdff2', '#a077c9'],
@@ -28,12 +33,30 @@ const Homepage = () => {
           </button>
         </Link>
 
-        <a
-          href="documents/Resume-Julia-Rodrigues-EN.pdf"
-          download="Resume-Julia-Rodrigues-EN.pdf"
-        >
-          <button>Get my CV</button>
-        </a>
+        <div className="dropdown">
+          <button onClick={() => setOpenDropdown(!openDropdown)}>
+            <span>
+              Get my CV <FaSortDown />
+            </span>
+          </button>
+
+          <div
+            className={`dropdown__content ${openDropdown ? 'open' : 'closed'}`}
+          >
+            <a
+              href="documents/Resume-Julia-Rodrigues-EN.pdf"
+              download="Resume-Julia-Rodrigues-EN.pdf"
+            >
+              In English <PiDownloadSimpleBold />
+            </a>
+            <a
+              href="documents/Resume-Julia-Rodrigues-PTbr.pdf"
+              download="Resume-Julia-Rodrigues-PTbr.pdf"
+            >
+              In Portuguese <PiDownloadSimpleBold />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
