@@ -9,13 +9,8 @@ const projects = [
     imgSrc: tennisCourtBookingApp,
     imgAlt: 'Screenshot of a project for booking tenis courts.',
     projectTitle: 'Tennis Court Booking',
-    projectDescription: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-    efficitur gravida metus, ut molestie nisl placerat vel. Vestibulum
-    faucibus est in ex malesuada, et consequat purus bibendum. Curabitur
-    luctus faucibus magna et dictum. Morbi pulvinar rhoncus magna non
-    blandit. Nunc est augue, molestie sit amet lacus sodales, porttitor
-    pellentesque sem. Curabitur venenatis dolor ut neque laoreet luctus.
-    Praesent laoreet leo nec eros molestie faucibus et vitae ipsum.`,
+    projectDescription: `This is a project that I developed using Next.js, Typescript, Context Api, Shadcn and Tailwind. It is a tool for booking
+    a Tennis Court, so it handles all the logic behind an agenda.`,
     githubRepoLink: 'https://github.com/jurawrssic/tennis-court-booking',
     liveDemoLink: 'https://tennis-court-booking-two.vercel.app/',
   },
@@ -24,13 +19,9 @@ const projects = [
     imgSrc: swimmerTrackerApp,
     imgAlt: 'Screenshot of a project for tracking swimming laps/progress.',
     projectTitle: 'Swimmer Tracker',
-    projectDescription: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-    efficitur gravida metus, ut molestie nisl placerat vel. Vestibulum
-    faucibus est in ex malesuada, et consequat purus bibendum. Curabitur
-    luctus faucibus magna et dictum. Morbi pulvinar rhoncus magna non
-    blandit. Nunc est augue, molestie sit amet lacus sodales, porttitor
-    pellentesque sem. Curabitur venenatis dolor ut neque laoreet luctus.
-    Praesent laoreet leo nec eros molestie faucibus et vitae ipsum.`,
+    projectDescription: `This is my personal project that is still in development. This uses React.js and Javascript, it is still at it's early stages
+    of development. I'm a swimmer, so, I wanted to create a tool to keep track of my progress. My goals for this project are to present all kinds of
+    data and charts to track how I'm doing and also learn new technologies while doing so.`,
     githubRepoLink: 'https://github.com/jurawrssic/swimmer-tracker',
     liveDemoLink: 'https://swimmer-tracker.vercel.app/',
   },
