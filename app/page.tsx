@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { fairyDustCursor } from 'cursor-effects';
 import SparklesComponent from '@/components/Sparkles';
@@ -9,8 +9,37 @@ import { PiDownloadSimpleBold } from 'react-icons/pi';
 
 import Link from 'next/link';
 
+let hasDropdownEventListenerBeenAdded = false;
+
 const Homepage = () => {
-  const [openDropdown, setOpenDropdown] = useState(false);
+  const [displayDropdown, setDisplayDropdown] = useState<boolean>(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const isClickOutsideOfDropdown = (e: Event) => {
+    return (
+      displayDropdown &&
+      dropdownRef.current &&
+      !dropdownRef.current.contains(e.target as HTMLElement)
+    );
+  };
+
+  const closeDropdown = (e: Event) => {
+    if (isClickOutsideOfDropdown(e)) setDisplayDropdown(false);
+  };
+
+  useEffect(() => {
+    if (!hasDropdownEventListenerBeenAdded) {
+      window.addEventListener('click', closeDropdown);
+      hasDropdownEventListenerBeenAdded = true;
+    }
+
+    return () => {
+      if (hasDropdownEventListenerBeenAdded) {
+        window.removeEventListener('click', closeDropdown);
+        hasDropdownEventListenerBeenAdded = false;
+      }
+    };
+  }, [displayDropdown]);
 
   useEffect(() => {
     fairyDustCursor({
@@ -33,15 +62,17 @@ const Homepage = () => {
           </button>
         </Link>
 
-        <div className="dropdown">
-          <button onClick={() => setOpenDropdown(!openDropdown)}>
+        <div className="dropdown" ref={dropdownRef}>
+          <button onClick={() => setDisplayDropdown(!displayDropdown)}>
             <span>
               Get my CV <FaSortDown />
             </span>
           </button>
 
           <div
-            className={`dropdown__content ${openDropdown ? 'open' : 'closed'}`}
+            className={`dropdown__content ${
+              displayDropdown ? 'open' : 'closed'
+            }`}
           >
             <a
               href="documents/Resume-Julia-Rodrigues-EN.pdf"
